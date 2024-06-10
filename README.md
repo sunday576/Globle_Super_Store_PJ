@@ -111,11 +111,12 @@ _Bdm4dByKzHbUmz_8-qs-sv_Wjjd6xdsZakBbUi9iHcTCS5s vào Excel, và tiến hành VL
 ### Tạo bảng Fact
 * Ở bảng Orders, tiến hành bỏ các cột thuộc tính đã được tách để tạo các bảng Dim (Customer_Name, Segment,City,Country, Category, Sub-Category, Product_Name, ) và chỉ chừa lại những thuộc tính khóa chính.
 * Bổ sung những trường thuộc tính khóa chính còn thiếu (City_ID) bằng Vlookup.
+
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/438a56f6-2a7e-4977-8db1-03852d47e8c8)
+  
 * Ta thu được bảng Orders mới đóng vai trò là bảng Fact như sau:
 
   ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/958a8eb8-438c-43de-990d-89b5cb75deb7)
 
-  
-  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/438a56f6-2a7e-4977-8db1-03852d47e8c8)
 
 ## Data Visualization 
