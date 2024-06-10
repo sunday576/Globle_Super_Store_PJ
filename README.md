@@ -1,4 +1,4 @@
-# Globle_Super_Store_PJ
+![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/5d9dad1b-6ad8-4532-b598-e7b147960834)# Globle_Super_Store_PJ
 ## Data Preparation
 * Thu thập dữ liệu: Bộ dữ liệu Global Super Store Dataset 2016 được thu thập thông qua đường link sau: https://powerbidocs.com/2019/11/28/power-bi-sample-data-set-for-practice/
 
@@ -30,7 +30,7 @@
     + Order_Priority: Thứ tự ưu tiên của đơn hàng.
 ## Data Preprocessing
 * Dữ liệu được thu thập không bao gồm các dòng giá trị trùng lặp và không có missing value nên không cần xử lý thêm ở bước này.
-* Ta sẽ tiến hành bỏ một số cột không cần thiết để thuận tiện cho quá trình phân tích cũng như giảm độ phức tạp của bài toán : Row_ID, Postal_Code, State, Market, Order_Priority --> ta thu được bộ dữ liệu mới gồm 19 cột và số dòng giữ nguyên.
+* Ta sẽ tiến hành bỏ một số cột không cần thiết để thuận tiện cho quá trình phân tích cũng như giảm độ phức tạp của bài toán : Row_ID, Postal_Code, State, Region (vì một số nước có diện tích rộng như Mỹ, Úc, sẽ thuộc nhiều vùng khác nhau), ShipMode, Market, Order_Priority --> ta thu được bộ dữ liệu mới gồm 17 cột và số dòng giữ nguyên.
 
 ## Data Modeling
 Ở bước này ta sẽ tiến hành xây dựng biểu đồ sao (star schema) với bảng Fact là Orders và các bảng Dim được tách ra từ các trường dữ liệu của bảng Orders.
@@ -85,24 +85,37 @@
   - Thực hiện các bước tương tự và tiến hành điền các giá trị Category_ID tương ứng sử dụng VLOOKUP, ta thu được kết quả sau:
   ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/9c0c2db7-ba6f-48f4-a757-37af84cb8a9e)
 
- #### Tương tự với các bảng còn lại ta thu được kết quả sau 
-* Bảng City:
-* Bảng Region:
-  - Sau khi tiến hành copy bảng, loại bỏ giá trị trùng lặp ta tạo Region_ID theo thứ tự R1,R2,... và thu được kết quả:
-    
-  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/f78dca49-d33b-4908-b7fc-d5e5ef324739)
-
-  - Lưu vùng giá trị này với tên Region
 
 * Bảng Country:
   - Ở bước tạo Country_ID, Tạo cột countryId, copy mã Alpha-code của các quốc gia từ trang web https://www.iban.com/countrycodes?fbclid=IwAR1gRAinFC-
 _Bdm4dByKzHbUmz_8-qs-sv_Wjjd6xdsZakBbUi9iHcTCS5s vào Excel, và tiến hành VLOOKUP để có mã quốc gia tương ứng:
 
-  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/15cd8b25-dcd0-4b07-af93-131d2df3f90e)
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/94c4f454-97f3-43a2-ac6a-2f04870cf8cf)
 
   - Vói một số quốc gia không có trong danh sách, ta sẽ tiến hành đặt mã thủ công sao cho không trùng lặp.
-  - Kết quả thu được: 
+  - Kết quả thu được:
+
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/ddd859d7-6516-4905-95ef-46bd06b7753d)
+
+* Bảng City:
+  - Các bước tương tự
+  - Ở bước tạo City_ID, ta kết hợp ký tự index và 3 ký tự đầu của tên thành phố để tránh trùng lặp, ta thu được kết quả sau:
+    
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/0d6fc602-ebaa-4e01-9e90-ad0e8175a37c)
+
+  - Copy Paste chỉ lấy giá trị cho City_ID và xóa cột index.
+
 * Bảng Customer:
+  - Ở bảng này, ta chỉ cần copy từ bảng Orders sang và loại bỏ các giá trị trùng lặp. 
+
+### Tạo bảng Fact
+* Ở bảng Orders, tiến hành bỏ các cột thuộc tính đã được tách để tạo các bảng Dim (Customer_Name, Segment,City,Country, Category, Sub-Category, Product_Name, ) và chỉ chừa lại những thuộc tính khóa chính.
+* Bổ sung những trường thuộc tính khóa chính còn thiếu (City_ID) bằng Vlookup.
+* Ta thu được bảng Orders mới đóng vai trò là bảng Fact như sau:
+
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/958a8eb8-438c-43de-990d-89b5cb75deb7)
 
   
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/438a56f6-2a7e-4977-8db1-03852d47e8c8)
+
 ## Data Visualization 
