@@ -120,6 +120,17 @@ _Bdm4dByKzHbUmz_8-qs-sv_Wjjd6xdsZakBbUi9iHcTCS5s vào Excel, và tiến hành VL
 
 
 ## Data Visualization 
+### Load dữ liệu từ Excel vào Power BI
+  - Chọn những bảng đã sử lý để load vào Power BI và chọn Transform Data để kiểm tra lại những bảng này.
+  -  Khi kiểm tra xong, chọn Close & Apply.
 
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/381df45c-7063-4729-a36d-3cc54a4deac2)
 
+  - Vào phần Model View ở thanh điều hướng bên trái của Power BI để kiểm tra lược đồ (schema) đã tạo:
+
+  ![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/0469d515-df48-4f4b-8915-59acafbcf022)
+
+  - Ở đây từ bộ dữ liệu đã được xử lý, ta thu được biểu đồ sao (star schema) như hình. 
+
+### Trực quan hóa
 
