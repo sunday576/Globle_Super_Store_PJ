@@ -133,4 +133,23 @@ _Bdm4dByKzHbUmz_8-qs-sv_Wjjd6xdsZakBbUi9iHcTCS5s vào Excel, và tiến hành VL
   - Ở đây từ bộ dữ liệu đã được xử lý, ta thu được biểu đồ sao (star schema) như hình. 
 
 ### Trực quan hóa
+* Tiến hành trực quan hóa với 3 Dashboard Overview, Customer View, Product View
+- Dashboard Overview: 
+![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/22833532-9581-46a7-ae1d-2f2eab6d05c0)
 
+  + Dashboard này gồm các thành phần: Logo công ty, thanh điều hướng giữa các Dashboard, các bộ lọc (theo năm, đất nước, thành phố, loại sản phẩm, sản phẩm), các dạng biểu đồ thể hiện nhiều thông tin khác nhau
+  + Khi chọn một hoặc nhiều bộ lọc thì các biểu đồ sẽ thay đổi theo các điều kiện được chọn. Ví dụ, khi chọn năm 2014 và nước Úc, ta được kết quả sau: 
+
+![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/94f3ccc7-e943-4b64-b37d-9b369203e73e)
+
+Tương tự với những dashboard khác, ta thu được những kết quả sau: 
+
+- Dashboard Product View:
+  
+![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/3f1888ad-998f-4d22-bc07-9e8209b94fbd)
+
+- Dashboard Customer View:
+
+![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/7bb70064-fb0e-44db-9eea-c2867e7dfb50)
+
+* Mở file Power BI ở nhánh main để xem chi tiết báo cáo.
