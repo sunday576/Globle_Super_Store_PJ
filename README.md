@@ -1,4 +1,4 @@
-![image](https://github.com/sunday576/Globle_Super_Store_PJ/assets/156815133/5d9dad1b-6ad8-4532-b598-e7b147960834)# Globle_Super_Store_PJ
+# Globle_Super_Store_PJ
 ## Data Preparation
 * Thu thập dữ liệu: Bộ dữ liệu Global Super Store Dataset 2016 được thu thập thông qua đường link sau: https://powerbidocs.com/2019/11/28/power-bi-sample-data-set-for-practice/
 
