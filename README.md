@@ -1,4 +1,5 @@
 # Globle_Super_Store_PJ
+Mục tiêu của dự án này là đào sâu vào bộ dữ liệu, khám phá các thông tin ý nghĩa và trình bày chúng một cách trực quan và thông tin. Thông qua sự trợ giúp của các công cụ trực quan hóa dữ liệu như Power BI, những dữ liệu có khối lượng lớn và phức tạp được chuyển hóa thành thông tin hữu ích có thể mang lại giá trị cho doanh nghiệp.
 ## Data Preparation
 * Thu thập dữ liệu: Bộ dữ liệu Global Super Store Dataset 2016 được thu thập thông qua đường link sau: https://powerbidocs.com/2019/11/28/power-bi-sample-data-set-for-practice/
 
